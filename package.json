@@ -7,8 +7,7 @@
   },
   "dependencies": {
     "express": "3.0.3",
-    "jade": "*",
-    "connect-sse": "~1.0.1",
+    "connect-sse": "~1.0.4",
     "socket.io": "~0.9.13"
   }
 }

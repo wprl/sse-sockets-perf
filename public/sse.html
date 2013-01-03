@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+
+    <script src="/lib/report.js"></script>
+  </head>
+  <body>
+    <script>
+      var numberOfMessages = 1;
+      var start            = new Date();
+      var end;
+      var results          = [];
+      var source           = new EventSource('/event-test');
+
+      source.onmessage = function (message) {
+        numberOfMessages += 1;
+
+        if(numberOfMessages === 10000) {
+          end = new Date();
+          results.push(end - start);
+          numberOfMessages = 1;
+          start = new Date();
+
+          if (results.length === 100) report.report(results);
+        }
+      };
+    </script>
+  </body>
+</html>
