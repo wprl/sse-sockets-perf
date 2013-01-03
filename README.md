@@ -3,7 +3,7 @@ sse-sockets-perf
 
 An Informal Test of Server Sent Events and WebSockets
 
-Check out http://kun.io/blog/39590083022/Server-Sent-Events-(EventSource)-and-WebSockets for more info.
+Check out http://kun.io/blog/39590083022/Performance-Test:-WebSockets-vs.-Server-Sent-Events-(EventSource) for more info.
 
 To run:
 
